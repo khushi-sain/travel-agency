@@ -1,0 +1,11 @@
+{
+    "db": {
+      "host": "localhost",
+      "port": 27017,
+      "name": "travelDB"
+    },
+    "server": {
+      "port": 5000
+    }
+  }
+  
