@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Nothing+You+Could+Do&family=Poiret+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Packages - Travel India</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { display: flex; justify-content: space-between; align-items: center; background:  #034C53; color: white; padding: 15px 50px; }
+        .logo { font-size: 40px; font-weight: bolder;}
+        nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
+        nav ul li { display: inline; }
+        nav ul li a { text-decoration: none; color: white; font-size: 18px; }
+        
+        nav ul li a:hover{
+            color: #FFC1B4;
+            
+        } .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        width: 220px;
+        left: -125px;
+        top: 40px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+
+    .dropdown input {
+        display: none;
+    }
+
+ 
+    .dropbtn {
+        cursor: pointer;
+        display: inline-block;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .dropbtn:focus {
+        outline: none;
+    }
+      
+        .hero {
+            background: url('./travel22.jpg') no-repeat center center/cover;
+            height: 300px; display: flex; align-items: center; justify-content: center; color: white;
+            font-size: 32px; font-weight: bold; text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+        }
+
+    
+        .container { width: 90%; margin: auto; padding: 30px 0; }
+        .section-title { text-align: center; font-size: 28px; margin-bottom: 20px; color: #333; }
+
+        .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .package-card {
+            background: white; padding: 15px; border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .package-card img { width: 100%; height: 180px; border-radius: 10px; object-fit: cover; }
+        .package-card h3 { font-size: 20px; margin: 10px 0; }
+        .package-card p { font-size: 14px; color: #555; }
+
+
+        .package-button {
+            background-color:  #034C53;
+            color: white; 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 20px; 
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .package-button:hover {
+            background-color: #005f8a; 
+        }
+
+        .trend-card:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+        .trend-card:nth-child(2) { grid-column: span 1; grid-row: span 1; }
+        .trend-card:nth-child(3) { grid-column: span 1; grid-row: span 1; }
+        .trend-card:nth-child(4) { grid-column: span 1; grid-row: span 2; }
+        .trend-card:nth-child(5) { grid-column: span 2; grid-row: span 1; }
+        .trend-card:nth-child(6) { grid-column: span 1; grid-row: span 2; }
+
+      
+        footer { text-align: center; padding: 15px; background: #007074; color: white; margin-top: 30px; }
+ 
+    </style>
+</head>
+<body>
+    
+    
+    <%- include('partials/header') %>
+
+
+    <div class="hero" style="font-family: 'Nothing You Could Do', cursive; font-weight: 400; font-style: normal; font-size: 50px; color: black;">
+        Explore the Best Tour Packages
+    </div>
+    
+    <!-- Packages Section -->
+    <div class="container">
+        <h2 class="section-title">Top 20 Travel Packages</h2>
+        <div class="packages-grid">
+            <div class="package-card">
+                <img src="goa.jpg" alt="Goa Beach Escape">
+                <h3>Goa Beach Escape</h3>
+                <p>Enjoy the sun, sand, and sea in Goa.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="mountain.jpg" alt="Himalayan Adventure">
+                <h3>Himalayan Adventure</h3>
+                <p>Experience the beauty of the Himalayas.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="kerala.jpg" alt="Kerala Backwaters">
+                <h3>Kerala Backwaters</h3>
+                <p>Cruise through the scenic backwaters of Kerala.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="rajasthan.jpg" alt="Rajasthan Heritage Tour">
+                <h3>Rajasthan Heritage Tour</h3>
+                <p>Explore the rich history of Rajasthan.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="Kashmir.jpg" alt="Kashmir Paradise">
+                <h3>Kashmir Paradise</h3>
+                <p>Witness the heavenly beauty of Kashmir.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="manali.jpg" alt="Manali Snow Retreat">
+                <h3>Manali Snow Retreat</h3>
+                <p>A perfect winter getaway to Manali.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="beach.jpg" alt="Andaman Islands">
+                <h3>Andaman Islands</h3>
+                <p>Discover pristine beaches and coral reefs.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="pexels-sanket-barik-2808574-7846490.jpg" alt="Ladakh Road Trip">
+                <h3>Ladakh Road Trip</h3>
+                <p>Adventure through the highest motorable roads.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="Udaipur.jpg" alt="Udaipur Luxury Escape">
+                <h3>Udaipur Luxury Escape</h3>
+                <p>Enjoy a royal stay in Udaipur.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="pexels-parimoofarhaan-31044093.jpg" alt="Darjeeling Tea Tour">
+                <h3>Darjeeling Tea Tour</h3>
+                <p>Experience the tea gardens of Darjeeling.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="mountain22.jpg" alt="Ooty Hill Station">
+                <h3>Ooty Hill Station</h3>
+                <p>A peaceful retreat in the Nilgiris.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="Varanasi.jpg" alt="Varanasi Spiritual Tour">
+                <h3>Varanasi Spiritual Tour</h3>
+                <p>A spiritual experience at the Ganges.</p>
+                <button class="package-button">View Details</button>
+            </div>
+    
+            <div class="package-card">
+                <img src="pexels-shreyas-kc46-944395.jpg" alt="Rishikesh Adventure">
+                <h3>Rishikesh Adventure</h3>
+                <p>Thrill-seekers paradise with river rafting.</p>
+                <button class="package-button">View Details</button>
+    </div>
+    </div>
+    </div>
+<%- include('partials/footer') %>
+
+
+</html>
+
+           

@@ -1,0 +1,514 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Trip - Travel India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cantarell&family=Nothing+You+Could+Do&family=Poiret+One&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Styling */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background: #f8f9fa; text-align: center; }
+        header { display: flex; justify-content: space-between; align-items: center; background:  #034C53; color: white; padding: 15px 50px; }
+        .logo { font-size: 40px; font-weight: bolder;}
+        nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
+        nav ul li { display: inline; }
+        nav ul li a { text-decoration: none; color: white; font-size: 18px; }
+        
+        nav ul li a:hover{
+            color: #FFC1B4;
+            
+        } .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        width: 220px;
+        left: -125px;
+        top: 40px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+
+    .dropdown input {
+        display: none;
+    }
+
+ 
+    .dropbtn {
+        cursor: pointer;
+        display: inline-block;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .dropbtn:focus {
+        outline: none;
+    }
+      
+        /* Hero Section */
+        .hero {
+          background: url('image.png') center/cover no-repeat;
+            height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 42px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+           
+        }
+        :root {
+    --primary-bg: #141B41; /* Midnight Navy */
+    --gold-gradient: linear-gradient(45deg,  #D3E671, #89AC46); /* Royal Gold */
+    --text-color: #FDF7E3; /* Ivory White */
+    --card-bg: #292F36; /* Graphite Gray */
+    --hover-highlight: #8B2635; /* Velvet Burgundy */
+}
+
+
+/* Hero Description Section */
+.hero-description {
+    background: var(--gold-gradient);
+
+    padding: 35px;
+    margin: 25px auto;
+    width: 60%;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(212, 175, 55, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-description:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 12px 35px rgba(212, 175, 55, 0.5);
+}
+
+/* Heading */
+.hero-description h2 {
+   
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Paragraph */
+.hero-description p {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+ /* Quiz Section with Glassmorphism */
+ .quiz-container {
+    background: linear-gradient(135deg, #80CBC4, #B4EBE6); 
+          padding: 30px;
+            width: 60%;
+            height: 370px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+            margin-top: 50px;
+            transition: 0.4s;
+           
+        }
+        .quiz-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+        }
+.quiz-container h2{
+    margin-top:40px;
+}
+        .quiz-step { display: none; }
+        .quiz-step.active { display: block; 
+        margin-top:20px;
+    font-size:23px;
+}
+        .option {
+            display: block;
+            margin: 10px auto;
+            padding: 12px;
+            width: 80%;
+            border-radius: 12px;
+            border: none;
+            background: linear-gradient(90deg, #4D55CC, #2DAA9E);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .option:hover { background: linear-gradient(90deg, #2DAA9E, #4D55CC); transform: scale(1.05); }
+
+
+        .trip h1{
+            margin-top:60px;
+            color:#007f7a;
+            font-size: 35px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); 
+        }
+
+        .result-btn{
+            margin-top:10px;
+            font-size:22px;
+            background: linear-gradient(90deg, #ff9a00, #ff3d00);
+            color: white;
+        }
+
+        .booking-form {
+            background: linear-gradient(135deg, #D3E671, #89AC46); 
+    width: 50%; /* Adjust width as needed */
+    margin: 40px auto; /* Centers the div horizontally */
+    padding: 20px;
+    text-align: center;
+  
+    padding: 20px;
+    border-radius: 10px;
+    width: 750px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    margin-top:10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+   
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-row .form-group {
+    width: 48%;
+}
+
+select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.passenger-count {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.passenger {
+    text-align: center;
+}
+
+.passenger label {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background: #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.enquire-btn {
+    width: 100%;
+    background: #007074;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-top: 15px;
+}
+
+.enquire-btn:hover {
+    background: #034C53;
+}
+
+.trip p{
+    font-size: 24px;
+    color:rgb(237, 36, 5);
+    font-weight: bold;
+}
+
+footer { text-align: center; padding: 15px; background: #007074; color: white; margin-top: 30px; }
+  
+
+
+    </style>
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+<!-- Hero Section -->
+<div class="hero" style="font-family: 'Nothing You Could Do', cursive; font-weight: 500; font-style: normal; font-size: 60px;">
+  Customize Your Dream Trip
+</div>
+
+<!-- Hero Description -->
+<div class="hero-description" style="padding: 20px; text-align: center;">
+  <h2>✨ Why Customize Your Trip? ✨</h2>
+  <p>
+    Everyone has a unique travel style! Whether you love <strong>adventure</strong>, <strong>relaxation</strong>, or <strong>luxury</strong>, 
+    we help create the <strong>perfect itinerary</strong> just for you. Answer a few quick questions and get 
+    <strong>tailored recommendations</strong> for your dream vacation. 🌍✨
+  </p>
+</div>
+
+<!-- Trip Quiz Intro -->
+<div class="trip" style="text-align: center; margin-top: 40px;">
+  <h1>🎯 Take Our Fun Travel Quiz to find your dream trip!</h1>
+</div>
+
+<!-- Quiz Section -->
+<div class="quiz-container" style="max-width: 800px; margin: auto; padding: 20px;">
+  <h2>Fun Travel Quiz</h2>
+  <form id="quizForm">
+    <% const quizSteps = [
+      ["1️⃣ Do you prefer Adventure or Relaxation?", "adventure", "relaxation"],
+      ["2️⃣ Mountain or Beach?", "mountain", "beach"],
+      ["3️⃣ Do you prefer Solo Travel or Group Travel?", "solo", "group"],
+      ["4️⃣ What's your favorite climate?", "cold", "warm"],
+      ["5️⃣ Do you like Cultural Experiences or Thrill Activities?", "culture", "thrill"]
+    ]; %>
+
+    <% quizSteps.forEach((step, i) => { %>
+      <div class="quiz-step <%= i === 0 ? 'active' : '' %>">
+        <p><%= step[0] %></p>
+        <button type="button" class="option" data-value="<%= step[1] %>"><%= step[1].charAt(0).toUpperCase() + step[1].slice(1) %></button>
+        <button type="button" class="option" data-value="<%= step[2] %>"><%= step[2].charAt(0).toUpperCase() + step[2].slice(1) %></button>
+      </div>
+    <% }); %>
+
+    <div class="quiz-step">
+      <h4>🎉 You're Done! 🎉</h4>
+      <p>Click the button below to reveal your dream trip destination!</p>
+      <button type="button" class="result-btn">Check Your Dream Trip</button>
+    </div>
+  </form>
+</div>
+
+<!-- Booking Form -->
+<div class="trip" style="text-align: center; margin-top: 50px;">
+  <h1>🌍 If you already know your dream destination, book now! ✈️</h1>
+  <p>Fill out the form below to plan your perfect trip with ease.</p>
+</div>
+
+<div class="booking-form" style="max-width: 800px; margin: auto; padding: 20px;">
+  <h2>Want To Go For A Memorable Holiday?</h2>
+  <form id="bookingForm">
+    <div class="form-group">
+      <label>Destination</label>
+      <input type="text" placeholder="Package Name / Destination Name">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Date of Departure</label>
+        <input type="date">
+      </div>
+      <div class="form-group">
+        <label>City of Departure</label>
+        <input type="text" placeholder="City of Departure">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text" placeholder="Mobile No.">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Email ID</label>
+      <input type="email" placeholder="Your E-mail Address">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Budget Preference</label>
+        <select>
+          <option>Luxury</option>
+          <option>Mid-Range</option>
+          <option>Budget-Friendly</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Travel Duration</label>
+        <select>
+          <option>Weekend (2-3 Days)</option>
+          <option>Short Trip (4-6 Days)</option>
+          <option>Long Vacation (7+ Days)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Accommodation Type</label>
+        <select>
+          <option>Hotel</option>
+          <option>Resort</option>
+          <option>Camping</option>
+          <option>Homestay</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Activities</label>
+        <select>
+          <option>Hiking & Trekking</option>
+          <option>Beach Relaxation</option>
+          <option>Cultural Tours</option>
+          <option>Adventure Sports</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Food Preferences</label>
+        <select>
+          <option>Vegetarian</option>
+          <option>Non-Vegetarian</option>
+          <option>Vegan</option>
+          <option>No Preference</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="passenger-count">
+      <% const passengerTypes = ['Adult', 'Child', 'Infant']; %>
+      <% passengerTypes.forEach(type => { %>
+        <div class="passenger">
+          <label><%= type %></label>
+          <button type="button">-</button>
+          <span><%= type === 'Adult' ? 2 : 0 %></span>
+          <button type="button">+</button>
+        </div>
+      <% }); %>
+    </div>
+
+    <button type="submit" class="enquire-btn">Enquire Now</button>
+  </form>
+</div>
+
+<script>
+  const quizSteps = document.querySelectorAll(".quiz-step");
+  const options = document.querySelectorAll(".option");
+  let stepIndex = 0;
+
+  options.forEach(option => {
+    option.addEventListener("click", () => {
+      quizSteps[stepIndex].classList.remove("active");
+      stepIndex++;
+      if (stepIndex < quizSteps.length) {
+        quizSteps[stepIndex].classList.add("active");
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const passengerControls = document.querySelectorAll(".passenger");
+
+    passengerControls.forEach(passenger => {
+      const minusBtn = passenger.querySelector("button:nth-child(2)");
+      const plusBtn = passenger.querySelector("button:nth-child(4)");
+      const countSpan = passenger.querySelector("span");
+
+      let count = parseInt(countSpan.innerText);
+
+      minusBtn.addEventListener("click", function () {
+        if (count > 0) {
+          count--;
+          countSpan.innerText = count;
+        }
+      });
+
+      plusBtn.addEventListener("click", function () {
+        count++;
+        countSpan.innerText = count;
+      });
+    });
+  });
+</script>
+<pre>
+
+
+
+
+
+</pre>
+    <%- include('partials/footer') %>
+</body>
+</html>
